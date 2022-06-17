@@ -1,0 +1,9 @@
+<div class="news-board-wrapper">
+    <div class="news-board" >
+        <div class="news-board-header" fxLayout="column" fxLayoutAlign="start center">{{title}}</div>
+        <div class="news-board-content">
+            <news-item *ngFor="let item of items" [item]="item"></news-item>
+        </div>
+    </div>
+    <img class="news-board-shadow-image" src="assets/shadow.png">
+</div>

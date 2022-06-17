@@ -1,0 +1,17 @@
+@import "../../../@es/styles/var";
+
+.search {
+    overflow: hidden;
+    transition: all .4s cubic-bezier(.35,0,.25,1);
+    margin-top: 8px;
+    width: 180px;
+    margin-left: 8px;
+    margin-right: 8px;
+  }
+  .header-search-icon{
+    width: $icon-size-normal;
+    height: $icon-size-normal;
+    font-size: $icon-size-normal;
+  }
+
+

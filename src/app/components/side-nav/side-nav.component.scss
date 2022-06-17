@@ -1,0 +1,57 @@
+@import '../../@es/styles/var';
+
+.sidenav {
+  background: $sidenav-background;
+  transition: width 0.25s;
+
+  &.collapsed{
+    width: 70px !important;
+    transition: width 0.25s;
+  }
+
+  .sidenav-header {
+    color: white;
+    background-color:$sidenav-header-background;
+
+    .sidenav-logo{
+      width: $sidenav-logo-width;
+      height: $sidenav-logo-height;
+      padding: $sidenav-logo-padding;
+    }
+    .sidenav-logo-thumbnail{
+      width: $sidenav-logo-width / 2;
+      height: $sidenav-logo-height / 2;
+    }
+
+    .sidenav-user {
+      color: white;
+      height: 80px;
+      padding: $padding-small;
+      .sidenav-user-name{
+        margin: 0;
+        opacity: 1;
+        transition: opacity 0.25s ease-in;
+        &.collapsed {
+          opacity: 0;
+        }
+      }
+      a {
+        &.collapsed{
+          margin-left: -20px;
+        }
+      }
+    }
+  }
+
+  .sidenav-toolbar-collapse-toggle {
+    transition: transform .25s;
+  }
+  
+.sidenav-toolbar-collapse-icon {
+    width: 12px;
+    height: 12px;
+    font-size: 12px;
+    line-height: 12px !important;
+    transform: rotate(-180deg);
+  }
+}

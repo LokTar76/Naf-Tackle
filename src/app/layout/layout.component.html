@@ -1,0 +1,26 @@
+<div class="container" fxLayout='column'>
+    <mat-sidenav-container autosize fxFlex [hasBackdrop]="(mobile$ | async) || quickPanelOpened">
+        <!-- <mat-sidenav #mobileDrawer *ngIf="mobile$ | async" [mode]="mode$ | async" [autoFocus]="false">
+            <app-side-nav-mobile (closeMobileDrawer)="mobileDrawer.toggle()"></app-side-nav-mobile>
+        </mat-sidenav> -->
+        <!-- <mat-sidenav #quickPanel mode="over" position="end" [autoFocus]="false" (closedStart)="quickPanelCloseStarted()">
+            <app-quick-panel></app-quick-panel>
+        </mat-sidenav> -->
+        <mat-sidenav-content class="content-container" fxLayout="column">
+            <app-header (openSideNav)="handleOpenSideNav()" (openQuickPanel)="handleOpenQuickPanel()"></app-header>
+            <div class="content-wrapper" fxLayout="column" fxLayoutAlign="space-between center">
+                <!-- <app-scrollbar [mode]='"content"' [media]="media" fxLayout="space-between column">
+                    <router-outlet></router-outlet>
+                    <span fxFlex></span>
+                    <app-footer></app-footer>
+                </app-scrollbar> -->
+                <router-outlet></router-outlet>
+                <span fxFlex></span>
+                <app-footer></app-footer>
+
+            </div>
+
+        </mat-sidenav-content>
+
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,62 @@
+@import '/src/app/@es/styles/var';
+:host{
+    width: 100%;
+}
+
+.title{
+    font-weight: 700;
+    padding-left: 70px;
+    color:gray;
+    :hover{
+        cursor: pointer;
+    }
+}
+.product-list{
+    padding-top: $padding-small;
+    padding-bottom: $padding-large;
+    //height: 80vh;
+    :hover{
+        cursor: pointer;
+    }
+    .product{
+        img{
+            height: 256px;
+            width: 256px;
+        }
+        p{
+            font-weight: 700;
+            text-align: center;
+            font-size: larger;
+        }
+    }
+}
+
+.product-detail{
+    padding: 0 12% 0 12%;
+    .product-detail-specification{
+        padding-left: 56px;
+        height: 400px;
+        .specifications-title{
+            font-size: large;
+            font-weight: 700;
+            margin-bottom: 0px;
+        }
+        .product-name{
+            font-size: xx-large;
+            font-weight: 500;
+            margin-bottom: 30px;
+        }
+        .product-description{
+            font-size: medium;
+            color:gray;
+        }
+    }
+}
+
+.video-wrapper{
+    padding: $padding-small;
+    .video-title{
+        font-size: large;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,24 @@
+<app-content class="content">
+    <div fxLayout="row wrap" fxLayoutAlign="space-between">
+        <!-- <fb-board #fbBoard *ngIf="!(mobile$ | async)"></fb-board> -->
+        <ngx-gallery #gallery class="gallery" (click)="onImageClick()" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+        <div class="headline">
+            <div>
+                <p style="padding-top:0px;text-decoration:line-through;font-weight:bold;font-size:120%;">&nbsp;lead&nbsp;</p>
+                <p style="font-size:95%;">Committed to environmental pro-</p>
+                <p style="font-size:95%;">tection fishing gear</p>
+                <p style="padding-bottom:0px;display:inline-block;font-size:35%;border-bottom:1px solid #AEDEE4;">Interior</p>
+            </div>
+        </div>
+        <div class="item-list" [class.mobile]="mobile$ | async" fxFlex fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+            <div class="item" *ngFor="let item of items">
+                <img class="icon" src={{item.icon}}>
+                <a [routerLink]="item.router">
+                    <div class="icon name">
+                        <p> {{item.name}}</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+</app-content>

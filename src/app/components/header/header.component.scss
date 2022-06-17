@@ -1,0 +1,47 @@
+@import '../../@es/styles/var';
+.header-wrapper{
+    width: 100%;
+    min-width: 500px;
+    background-color: transparent;
+    .header {
+        height: $header-height;
+        color: rgba(0, 0, 0, 0.87);
+        background-color: transparent;
+        width: 100%;
+        &.mobile{
+            height: $header-mobile-height;
+            width: 100%;
+        }
+    
+        .header-top-section{
+            background-color: #767D79;
+            color:$header-top-section-color;
+            width: 100%;
+            height: 100%;
+            .header-menu {
+                height: 100%
+            }
+            .header-logo{
+                // width: 98px;
+                // height: $header-height + 121px;
+                height:126px;   
+                margin-left: 62px;
+                z-index: 999;
+            }
+        }
+    
+        &.over{
+            margin: $margin-header-side-mode;
+        }
+        .header-mobile-toggle{
+            margin-left: 5px;
+        }
+        .header-button{
+            border-left-width: 1px;
+            border-left-style: solid;
+            display: flex;
+            border-left-color: rgba(0, 0, 0, 0.87);
+        }
+    }
+}
+

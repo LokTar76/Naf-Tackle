@@ -1,0 +1,48 @@
+<app-scrollbar [mode]="mode" fxLayout="column">
+    <ng-container *ngIf="isMobile$ | async; then expansionPanel else tabGroup"></ng-container>
+    <ng-template #tabGroup>
+        <mat-tab-group class="quickPanelTabGroup" [disablePagination]="true">
+            <mat-tab label="First">
+                <div *ngFor="let t of test">
+                    Content 1
+                </div>
+            </mat-tab>
+            <mat-tab label="Second">
+                <div>
+                    Content 2
+                </div>
+            </mat-tab>
+        </mat-tab-group>
+    </ng-template>
+    <ng-template #expansionPanel>
+        <mat-expansion-panel>
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    First
+                </mat-panel-title>
+                <mat-panel-description>
+
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div *ngFor="let t of test">
+                Content 1
+            </div>
+        </mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    Second
+                </mat-panel-title>
+                <mat-panel-description>
+
+                </mat-panel-description>
+            </mat-expansion-panel-header>
+            <div>
+                Content 2
+            </div>
+        </mat-expansion-panel>
+
+
+    </ng-template>
+
+</app-scrollbar>

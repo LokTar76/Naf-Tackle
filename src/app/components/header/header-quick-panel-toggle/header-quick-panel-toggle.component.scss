@@ -1,0 +1,13 @@
+@import '../../../@es/styles/var';
+.button {
+    border-radius: 0;
+    padding: 0;
+    min-width: $header-button-width;
+  }
+
+.header-quick-panel-icon {
+  width: $icon-size-normal;
+  height: $icon-size-normal;
+  font-size: $icon-size-normal;
+ 
+}

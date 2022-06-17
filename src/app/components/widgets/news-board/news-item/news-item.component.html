@@ -1,0 +1,13 @@
+<div class="news-item" fxLayout="row">
+    <div class="image-wrapper">
+        <img class="news-image" [src]='item.imagePath'>
+    </div>
+    <div class="news-summary" fxLayout="column" fxLayoutAlign="start">
+        <span class="item-created">{{item.dtCreated}}</span>
+        <a class="title">{{item.title}}</a>
+        <p class="description">
+            {{item.description}}
+            <a class="read-more">Read More</a>
+        </p>
+    </div>
+</div>

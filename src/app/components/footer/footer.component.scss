@@ -1,0 +1,36 @@
+@import '../../@es/styles/var';
+:host{
+    width: 100%;
+}
+
+.footer-wrapper{
+    width: 100%;
+    min-width: 500px;
+    height: 150px;
+    background-color: transparent;
+    .footer {
+        color: rgba(0, 0, 0, 0.87);
+        width: 100%;
+        margin-top: 0px;
+        background-color: #767D79;
+        .logo{
+            width: 60px;
+        }
+        .copyRight{
+            color:white;
+            font-size: 12px;
+        }
+        .contact{
+            margin-right: 40px;
+            margin-top: 10px;
+            .external-images{
+                img{
+                    height: 18px;
+                    padding:3px;
+                }
+            }
+        }
+
+    }
+}
+

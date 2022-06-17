@@ -1,0 +1,23 @@
+@import '../../../@es/styles/var';  
+.search {
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .4s cubic-bezier(.35,0,.25,1);
+    margin-top: 8px;
+
+  
+    &.search-open {
+      width: 180px;
+      visibility: visible;
+      opacity: 1;
+      margin-left: 8px;
+      margin-right: 8px;
+    }
+  }
+  .header-search-icon{
+    width: $icon-size-normal;
+    height: $icon-size-normal;
+    font-size: $icon-size-normal;
+  }

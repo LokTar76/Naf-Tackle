@@ -1,0 +1,17 @@
+@import '~@angular/flex-layout/mq';
+
+.app-content{
+    display: block;
+    padding-top: $padding-content-top;
+    padding-left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: relative;
+    &.side{
+        padding: $padding-content-side-mode;
+    }
+    &.mobile{
+        padding: $padding-content-mobile-mode;
+    }
+}

@@ -1,0 +1,33 @@
+@import '../../../@es/styles/var';  
+.fb-board-wrapper{
+    overflow: auto;
+    &.mobile{
+        height: auto !important;
+    }
+    .fb-board{
+        width: $facebook-board-width;
+        box-shadow: $widget-box-shadow;
+
+        .fb-board-header{
+            font-family: 'Open Sans', sans-serif;
+            background: #222;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 34px;
+            height: 58px;
+            display: block;
+            color: #FFF;
+            text-shadow: 1px 1px 1px #000;
+            .fb-icon{
+                width: 33px;
+                padding: 12px;
+            }
+        }
+        .fb-board-content{
+            overflow: auto;
+            &.mobile{
+                height: auto;
+            }
+        }
+    }
+}

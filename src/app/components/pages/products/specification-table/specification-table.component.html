@@ -1,0 +1,28 @@
+<div class="wrapper">
+    <table class="table">
+        <tbody>
+          <tr *ngIf="specification.color">
+            <th class="color-header">Color</th>
+            <td colspan="10" class="color-value">{{specification.color}}</td>
+          </tr>
+          <tr *ngIf="specification.model">
+            <th>Model</th>
+            <td *ngFor="let model of specification.model">
+                {{model}}
+            </td>
+          </tr>
+          <tr *ngIf="specification.weight_g">
+            <th>W.(g)</th>
+            <td *ngFor="let w of specification.weight_g">
+                {{w}}
+            </td>
+          </tr>
+          <tr *ngIf="specification.weight_oz">
+            <th>W.(oz)</th>
+            <td *ngFor="let w of specification.weight_oz">
+                {{w}}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

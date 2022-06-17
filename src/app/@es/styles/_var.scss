@@ -1,0 +1,70 @@
+//General
+$spacing: 24px;
+$border-radius: 8px;
+
+$padding: 24px;
+$padding-small: 12px;
+$padding-minor: 10px;
+$padding-large: 40px;
+
+// Header
+$header-height: 52px;
+$header-mobile-height: 80px;
+$header-box-shadow:  0px 2px 1px -1px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+$padding-header-header: 35px;
+$header-button-width: 32px;
+$margin-header-side-mode: 0 0 0 0;
+$header-top-section-color: #999999;
+
+//Sidenav
+$sidenav-width: 240px;
+$sidenav-background: #283144;
+$sidenav-header-background:  #181e2a;
+$sidenav-logo-width: 135px;
+$sidenav-logo-height: 90px;
+$sidenav-logo-padding: 30px 0 0 0;
+
+
+//Sidenav item
+$sidenav-item-icon-size: 22px;
+
+$sidenav-item-height: 44px;
+$sidenav-item-padding-left: 24px;
+$sidenav-item-padding-right: 16px;
+$sidenav-item-margin-right: 8px;
+$sidenav-item-color-hover: white !default;
+$sidenav-item-background-hover: darken($sidenav-background, 2.5) !default;
+$sidenav-item-color-active: white !default;
+$sidenav-item-background-active: #2196F3 !default;
+
+
+//Sidenav Content
+$padding-sidenav-content: 0 0px 0px 0px;
+
+// Content
+$padding-content: 3px; 
+$padding-content-side-mode: 3px;
+$padding-content-mobile-mode: 3px;
+$padding-content-left: 12px;
+$padding-content-top: 0px;
+
+// Card
+$card-margin: 5px;
+
+//Quick Panel
+$quick-panel-width: 250px;
+
+//Widgets
+$widget-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.3);
+$widget-padding: 8px;
+//Facebook
+$facebook-board-width: 352px;
+
+//Icon
+$icon-size-small: 16px;
+$icon-size-normal: 24px;
+$icon-size-large: 32px;
+
+// Color:
+$primary: #0c4b83;
+$second: #3574a6;

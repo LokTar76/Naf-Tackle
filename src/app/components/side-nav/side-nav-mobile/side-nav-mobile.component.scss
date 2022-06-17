@@ -1,0 +1,36 @@
+@import '../../../@es/styles/var';
+
+.sidenav-mobile {
+  height: 100%;
+  width: 220px;
+  background: $sidenav-background;
+
+  .sidenav-header {
+    color: white;
+    background-color:$sidenav-header-background;
+
+    .sidenav-logo{
+      width: $sidenav-logo-width;
+      padding: $sidenav-logo-padding;
+    }
+    .sidenav-logo-thumbnail{
+      width: $sidenav-logo-width / 2;
+      height: $sidenav-logo-height / 2;
+    }
+
+    .sidenav-user {
+      color: white;
+      height: 80px;
+      padding: $padding-small;
+      .phone-icon{
+        margin-right: 15px;
+        width: $icon-size-small;
+        height: $icon-size-small;
+        font-size: $icon-size-small;
+      }
+    }
+  }
+.sidenav-items {
+    min-height: 0;
+  }
+}

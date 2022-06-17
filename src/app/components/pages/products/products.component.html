@@ -1,0 +1,34 @@
+<app-content>
+    <img style="width: 100%" src="assets/image/products/PRODUCT baner.jpg" />
+    <p class="title">
+        <a (click)="removeSelectedProduct()">PRODUCTS</a><a *ngIf="selectedProduct"> \ {{selectedProduct.name}}</a>
+    </p>
+    <ng-container *ngIf="selectedProduct then detail else list"></ng-container>
+    <ng-template #list>
+        <div class="product-list" fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+            <div class="product" *ngFor="let product of products"  (click)="onProductClick(product)">
+                <img [src]="product.defaultImageUrl" />
+                <p>{{product.name}}</p>
+            </div>
+        </div>
+    </ng-template>
+    <ng-template #detail>
+        <div class="product-detail" fxLayout="row wrap" fxLayoutAlign="space-around start">
+            <div>
+                <ngx-gallery #gallery class="gallery" (click)="onImageClick()" [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>
+            </div>
+            <div class="product-detail-specification" fxFlex fxLayout="column">
+                <p class="product-name">{{selectedProduct.name}}</p>
+                <p class="product-description">{{selectedProduct.description}}</p>  
+            </div>
+        </div>
+        <div class="video-wrapper"  fxLayout="column" fxLayoutAlign="space-around center">
+            <video width="800px" controls>
+                <source [src]="selectedProduct.videoUrl">
+            </video>
+            <div style="padding:20px;"  *ngIf="selectedProduct.specifications">
+                <specification-table *ngFor="let s of selectedProduct.specifications" [specification]="s"></specification-table>
+            </div>
+        </div>
+    </ng-template>    
+</app-content>

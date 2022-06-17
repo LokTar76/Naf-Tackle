@@ -1,0 +1,20 @@
+@import '../../../../@es/styles/var';
+.header-menu-item{
+    font-size: smaller;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    color: white;
+    width: auto;
+    padding: 10px;
+    text-decoration: none;
+    &:hover{
+        color: $primary;
+    }
+    &.active{
+        border-bottom: 3px solid yellow;
+        padding-bottom: 5px;
+    }
+    .expand-indicator{
+        transition: transform .25s cubic-bezier(.35, 0, .25, 1);
+    }
+}

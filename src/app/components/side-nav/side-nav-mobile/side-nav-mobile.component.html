@@ -1,0 +1,14 @@
+<app-scrollbar class="sidenav-mobile" fxLayout="column">
+  <div class="sidenav-header">
+    <div fxLayout="row" fxLayoutAlign="center center">
+      <img class="sidenav-logo" src="assets/image/ecoft_mobile_logo.jpg" />
+    </div>
+    <div class="sidenav-user" fxLayout="row" fxLayoutAlign="center center">
+
+        <mat-icon class="phone-icon">phone</mat-icon>
+        Call Us: 123 - 456 - 789
+    </div>
+  </div>
+  <app-side-nav-item (closeMobileDrawer)="closeMobileDrawer.emit()" *ngFor="let item of items" [item]="item">
+  </app-side-nav-item>
+</app-scrollbar>

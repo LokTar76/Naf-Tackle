@@ -1,0 +1,24 @@
+@import '../../../@es/styles/var';
+  mat-divider {
+    background-color:white;
+    height: 20px;
+  }
+  
+
+
+  .external-container {
+    width: 210px;
+    position: relative;
+    .external-icons{
+      position: absolute;
+      right:40px;
+      .external-icon {
+        height: 18px;
+        padding: 3px;
+      }
+    }
+  }
+
+  span {
+    width: 8px;
+  }

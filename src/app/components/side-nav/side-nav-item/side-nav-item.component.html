@@ -1,0 +1,45 @@
+<div class="sidenav-item">
+  <ng-container *ngIf="item.type=='subheading'; then subHeading else items"></ng-container>
+  <ng-template #subHeading>
+    <div class="sidenav-subheading" [class.over]="collapsed$ | async">
+      <a class="subheading-name">
+        <span class="subheading-badge">{{item.name}}</span>
+        <span fxFlex>
+          <!-- fill space --></span>
+      </a>
+    </div>
+  </ng-template>
+
+  <ng-template #items>
+    <ng-container *ngIf="item.subItems; then itemSubItems else link"></ng-container>
+  </ng-template>
+
+  <ng-template #itemSubItems>
+    <a (click)="openSubItems()" class="sidenav-item-link" fxLayout="row" fxLayoutAlign="start center" matRipple>
+      <ng-container *ngTemplateOutlet="linkContent"></ng-container>
+    </a>
+  </ng-template>
+
+  <ng-template #link>
+    <a matRipple (click)="closeMobileDrawer.emit()" [routerLink]="item.router" routerLinkActive="active"
+      class="sidenav-item-link" fxLayout="row" fxLayoutAlign="start center">
+      <ng-container *ngTemplateOutlet="linkContent"></ng-container>
+    </a>
+  </ng-template>
+  <ng-template #linkContent>
+    <!-- <mat-icon *ngIf="!item.hasParent" class="icon">{{ item.icon }}</mat-icon> -->
+    <!-- <div *ngIf="item.hasParent" class="text-icon" fxFlex="none">{{ getTextIcon() }}</div> -->
+    <span [class.subItem]="item.hasParent" class="name">{{ item.name }}</span>
+    <span fxFlex>
+      <!-- fill space --></span>
+    <mat-icon *ngIf="item.subItems" [class.rotate]="open" class="expand-indicator">
+      expand_more
+    </mat-icon>
+  </ng-template>
+  <ng-container *ngIf="item.subItems">
+    <div [@dropdownOpen]="open" class="dropdown">
+      <app-side-nav-item (closeMobileDrawer)="closeMobileDrawer.emit()" *ngFor="let subItem of item.subItems"
+        [item]="subItem"></app-side-nav-item>
+    </div>
+  </ng-container>
+</div>

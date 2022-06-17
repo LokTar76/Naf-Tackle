@@ -1,0 +1,53 @@
+@import '/src/app/@es/styles/var';
+:host{
+    width: 100%;
+}
+
+.contact-wrapper{
+    //height: 80vh;
+    .title{
+        font-weight: 700;
+        padding-left: 70px;
+        color:gray;
+        :hover{
+            cursor: pointer;
+        }
+    }
+    .content{
+        padding-left: 80px;
+        padding-right: 80px;
+        .title{
+            font-weight: 700;
+            padding: $padding-minor;
+            color:black;
+            font-size: larger;
+        }
+        .description{
+            padding-left: 10px;
+        }
+        .contact-section{
+            padding-left: 10px;
+            width: 100%;
+            .contact-label{
+                display: block;
+                font-weight: 500;
+                padding-bottom: 5px;
+            }
+            .contact-input{
+                width: 70%;
+                height: 20px;
+            }
+            .contact-message{
+                width: 85%;
+                height: 60px;
+            }
+            button{
+                width: 86%;
+                background-color: black;
+                color:white;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}

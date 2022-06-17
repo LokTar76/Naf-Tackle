@@ -1,0 +1,31 @@
+<app-scrollbar [mode]='"sideNav"' class="sidenav" [class.collapsed]="collapsed$|async" fxLayout="column">
+  <div class="sidenav-header">
+    <ng-container *ngIf="collapsed$|async; then thumbnail else logo"></ng-container>
+    <div class="sidenav-user" fxLayout="row" fxLayoutAlign="start center">
+      <p class="sidenav-user-name" [class.collapsed]="collapsed$|async">Joe Doe</p>
+      <span fxFlex></span>
+      <a mat-icon-button [class.collapsed]="collapsed$|async" (click)="logout()">
+          <mat-icon>exit_to_app</mat-icon>
+      </a>
+    </div>
+  </div>
+  <app-side-nav-item *ngFor="let item of items" [item]="item"></app-side-nav-item>
+</app-scrollbar>
+
+<ng-template #logo>
+  <div fxLayout="row" fxLayoutAlign="start center">
+    <img class="sidenav-logo" src="assets/image/angular.png"/> 
+    <span *ngIf="!(collapsed$|async)" fxFlex></span>
+    <div  *ngIf="!(collapsed$|async)" fxFlexAlign="center">
+      <button (click)="changeMode()" class="sidenav-toolbar-collapse-toggle" mat-icon-button>
+        <mat-icon *ngIf="sideDrawer" class="sidenav-toolbar-collapse-icon">radio_button_checked</mat-icon>
+        <mat-icon *ngIf="!sideDrawer" class="sidenav-toolbar-collapse-icon">radio_button_unchecked</mat-icon>
+      </button>
+    </div>
+  </div>
+</ng-template>
+<ng-template #thumbnail>
+  <div fxLayout="row" fxLayoutAlign="center center">
+    <img class="sidenav-logo-thumbnail" src="assets/image/angular.png"/> 
+  </div>
+</ng-template>

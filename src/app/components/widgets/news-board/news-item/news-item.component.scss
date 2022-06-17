@@ -1,0 +1,38 @@
+@import "../../../../@es/styles/var";
+$news-padding: 8px;
+
+.news-item{
+    border-bottom: 1px solid #c5c5c5;
+    padding: $news-padding;
+    .image-wrapper{
+        .news-image{
+            width: 128px;
+            height: 128px;
+        }
+    }
+    .news-summary{
+        padding: $news-padding;
+        .item-created{
+            font-size: 14px;
+            font-style: italic;
+            color: $primary;
+        }
+        .title{
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 24px;
+            margin: 0 0 4px;
+        }
+        .description{
+            font-size: 14px;
+            margin: 0 0 4px;
+            .read-more{
+                font-style: italic;
+                &:hover{
+                    color: $second;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

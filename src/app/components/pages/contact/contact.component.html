@@ -1,0 +1,45 @@
+<app-content>
+    <!-- <div style="margin-left:10%;margin-top:10%;font-size:large;" class="contact-wrapper">
+        <p style="font-size:xx-large;margin-bottom:30px;">Contact Us</p>
+        <p style="margin-bottom:20px;">Have any questions? We'd love to hear from you.</p>
+        <a href="mailto:info@naftackle.com">info@naftackle.com</a>
+    </div> -->
+    <div class="contact-wrapper">
+        <img style="width: 100%" src="assets/image/products/PRODUCT baner.jpg" />
+        <p class="title">
+            <a>HOME</a>/<a>CONTACT</a>
+        </p>
+        <div class="content" fxLayout="column" fxLayoutAlign="start space-around">
+
+            <p class="title">Contact Us</p>
+            <p class="description">
+                For your inquires, please fill the form, and we will get back to you asap.
+            </p>
+            <div class="contact-section" fxLayout="row wrap" fxLayoutAlign="start space-around">
+                <div fxFlex="50">
+                    <label class="contact-label">First Name*</label>
+                    <input class="contact-input" type="text" [(ngModel)]="firstName">
+                </div>
+                <div fxFlex="50"  fxFlexAlign="end">
+                    <label class="contact-label">Last Name*</label>
+                    <input class="contact-input" type="text" [(ngModel)]="lastName">
+                </div>
+                <div style="margin-top: 10px;" fxFlex="50">
+                    <label class="contact-label">Email*</label>
+                    <input class="contact-input" type="text" [(ngModel)]="email">
+                </div>
+                <span fxFlex="50"></span>
+                <div style="margin-top: 10px;" fxFlex="100">
+                    <label class="contact-label">Message*</label>
+                    <textarea class="contact-message" [(ngModel)]="message"></textarea>
+                </div>
+                <div style="margin-top: 30px;" fxFlex="100">
+                    <button mat-button (click)="onSubmitClicked()">Submit</button>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+</app-content>
+

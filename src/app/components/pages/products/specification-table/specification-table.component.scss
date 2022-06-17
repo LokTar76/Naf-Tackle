@@ -1,0 +1,36 @@
+:host{
+    margin-top: 10px;
+    display: block;
+}
+.wrapper{
+    .table{
+        .color-header{
+            font-size: larger;
+        }
+        .color-value{
+            padding-left: 15px;
+            font-weight: 500;
+            text-align: left !important;
+        }
+        tr{
+            height: 30px;
+            th{
+                background-color: white;
+                font-size: larger;
+            }
+            td{
+                font-size: medium;
+                text-align: center;
+                min-width: 80px;
+                height: 25px;
+            }
+        }
+    }
+    .title{
+        font-weight: 700;
+        padding:4px;
+    }
+    .content{
+        margin-left: 4px;
+    }
+}

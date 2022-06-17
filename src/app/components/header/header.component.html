@@ -1,0 +1,21 @@
+<div class="header-wrapper" fxLayout="row" fxLayoutAlign="center">
+  <div class="header" fxLayout="column" fxLayoutAlign="start start"
+    [class.mobile]="mobile$ | async">
+    <div class="header-top-section" fxLayout="row" fxLayoutAlign="start start">
+      <!-- <ng-container *ngIf="(mobile$ | async);then mobileHeader else header"></ng-container> -->
+      <!-- <ng-template #mobileHeader>
+        <header-mobile-menu-toggle (openSideNav)="openSideNav.emit()"></header-mobile-menu-toggle>
+        <span fxFlex ></span>
+        <img class="header-logo" src="assets/image/ecoft.png" />
+        <span fxFlex ></span>
+      </ng-template> -->
+<!--       
+      <ng-template #header> -->
+        <img class="header-logo" src="assets/image/web element.png" />
+        <span fxFlex ></span>
+        <header-menu class="header-menu" fxLayout="row" fxLayoutAlign="start center"></header-menu>
+        <!-- <header-quick-panel-toggle (openQuickPanel)="openQuickPanel.emit()"></header-quick-panel-toggle> -->
+      <!-- </ng-template> -->
+    </div>
+  </div>
+</div>

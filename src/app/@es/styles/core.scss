@@ -1,0 +1,18 @@
+@import "./var";
+
+@import "~simplebar/dist/simplebar.css";
+@import "../shared/content/content.directive.theme.scss";
+@import "../shared/scrollbar/scrollbar.directive.scss";
+
+.container mat-sidenav-container mat-sidenav .mat-drawer-inner-container {
+    overflow: hidden !important;
+  }
+
+  .quickPanelTabGroup{
+    .mat-tab-label{
+      min-width: $quick-panel-width / 2 ;
+  }
+
+
+}  
+

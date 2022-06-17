@@ -1,0 +1,22 @@
+@import '../../styles/var';
+
+.scrollbar-sideNav{
+    height: 100%;
+    width: $sidenav-width;
+}
+
+.scrollbar-content{
+    height: calc(100% - #{$header-height} - 3px); //3px for padding space.
+    width: 1280px;
+
+}
+
+.scrollbar-quickPanel{
+    height: 100%;
+    width: $quick-panel-width;
+}
+
+.scrollbar-content-screen{
+    width: 100% !important;
+}
+
